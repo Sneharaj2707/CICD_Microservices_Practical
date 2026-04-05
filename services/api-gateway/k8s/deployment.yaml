@@ -13,7 +13,7 @@ spec:
       - name: jfrog-secret
       containers:
       - name: api-gateway
-        image: jfrog2026.jfrog.io/microservices/project/api-gateway:v1.0.1
+        image: hiqodenew.jfrog.io/cicd-docker/new-app/api-gateway:v1
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
