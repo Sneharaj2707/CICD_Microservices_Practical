@@ -9,10 +9,12 @@ spec:
   template:
     metadata: { labels: { app: users } }
     spec:
+      imagePullSecrets:
+      - name: jfrog-secret
       containers:
       - name: users
         image: jfrog2026.jfrog.io/microservices/project/users:v1.0.1
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         ports:
         - containerPort: 3001
         readinessProbe:
@@ -20,6 +22,4 @@ spec:
           initialDelaySeconds: 3
           periodSeconds: 10
         livenessProbe:
-          httpGet: { path: /health, port: 3001 }
-          initialDelaySeconds: 10
-          periodSeconds: 20
+          httpGet: { path: /health, port: 3001
