@@ -9,10 +9,12 @@ spec:
   template:
     metadata: { labels: { app: orders } }
     spec:
+      imagePullSecrets:
+      - name: jfrog-secret
       containers:
       - name: orders
         image: jfrog2026.jfrog.io/microservices/project/orders:v1.0.1
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         ports:
         - containerPort: 3003
         readinessProbe:
