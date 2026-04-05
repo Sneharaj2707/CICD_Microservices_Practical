@@ -13,7 +13,7 @@ spec:
       - name: jfrog-secret
       containers:
       - name: users
-        image: jfrog2026.jfrog.io/microservices/project/users:v1.0.1
+        image: jfrog2026.jfrog.io/microservices/project/users:v1.0.7
         imagePullPolicy: Always
         ports:
         - containerPort: 3001
@@ -22,4 +22,6 @@ spec:
           initialDelaySeconds: 3
           periodSeconds: 10
         livenessProbe:
-          httpGet: { path: /health, port: 3001
+          httpGet: { path: /health, port: 3001 }
+          initialDelaySeconds: 10
+          periodSeconds: 20
