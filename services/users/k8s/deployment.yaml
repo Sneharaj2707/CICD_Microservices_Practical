@@ -13,7 +13,7 @@ spec:
       - name: jfrog-secret
       containers:
       - name: users
-        image: jfrog2026.jfrog.io/microservices/project/users:v1.0.7
+        image: hiqodenew.jfrog.io/cicd-docker/new-app/users:v1
         imagePullPolicy: Always
         ports:
         - containerPort: 3001
