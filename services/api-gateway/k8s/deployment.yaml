@@ -9,11 +9,12 @@ spec:
   template:
     metadata: { labels: { app: api-gateway } }
     spec:
+      imagePullSecrets:
+      - name: jfrog-secret
       containers:
       - name: api-gateway
         image: jfrog2026.jfrog.io/microservices/project/api-gateway:v1.0.1
-        image: image_name
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
         readinessProbe:
