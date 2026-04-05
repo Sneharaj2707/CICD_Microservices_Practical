@@ -5,7 +5,7 @@ metadata:
   labels: { app: orders }
 spec:
   selector: { app: orders }
-  type: ClusterIP
+  type: LoadBalancer
   ports:
   - port: 3003
     targetPort: 3003
