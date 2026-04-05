@@ -5,7 +5,7 @@ metadata:
   labels: { app: users }
 spec:
   selector: { app: users }
-  type: ClusterIP
+  type: LoadBalancer
   ports:
   - port: 3001
     targetPort: 3001
