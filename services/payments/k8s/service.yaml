@@ -5,7 +5,7 @@ metadata:
   labels: { app: payments }
 spec:
   selector: { app: payments }
-  type: ClusterIP
+  type: LoadBalancer
   ports:
   - port: 3004
     targetPort: 3004
