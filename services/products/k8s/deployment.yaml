@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: products
-        image: hiqodenew.jfrog.io/cicd-docker/new-app/products:v1
+        image: jfrog2026.jfrog.io/microservices/project/products:v1.0.1
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3002
